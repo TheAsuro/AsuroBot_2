@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="AsuroBot_2.ChatWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Background="White">
+        <TabControl x:Name="tcChannels" Margin="0">
+            <TabItem x:Name="StatusTab" Header="Status" Padding="6,1">
+                <Grid Background="#FFE5E5E5">
+                    <ScrollViewer Margin="0">
+                        <TextBox x:Name="SystemText" Margin="0" TextWrapping="Wrap" Text="AsuroBot Version 2.0.0" Background="White" FontFamily="Global Monospace" IsReadOnly="True"/>
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

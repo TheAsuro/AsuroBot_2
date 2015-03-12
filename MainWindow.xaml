@@ -1,0 +1,42 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:AsuroBot_2" x:Class="AsuroBot_2.MainWindow"
+        Title="MainWindow" Height="405" Width="690" Closing="Window_Closing" MinWidth="460" MinHeight="310">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="32"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <local:ChatWindow x:Name="Chat"/>
+        <TextBox x:Name="tbChat" Margin="2" Grid.Row="1" TextWrapping="Wrap" FontSize="16" KeyDown="TextBox_KeyDown"/>
+        <Grid Grid.Column="1" Margin="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="22"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button x:Name="bnServerConnect" Content="Connect to Server" Margin="5,0,5,5" Click="bnServerConnect_Click" Grid.Row="1"/>
+            <TextBox x:Name="tbServerConnect" Margin="5" Grid.Row="2" TextWrapping="Wrap" Text="theasuro.de:6667"/>
+            <Button x:Name="bnChannelJoin" Content="Join Channel" Grid.Row="4" Margin="5" Click="bnChannelJoin_Click"/>
+            <TextBox x:Name="tbChannelJoin" Grid.Row="5" TextWrapping="Wrap" Text="#theasuro" Margin="5"/>
+            <Button x:Name="bnChangeUsername" Content="Change Username" Grid.Row="7" Margin="5" Click="bnChangeUsername_Click"/>
+            <TextBox x:Name="tbChangeUsername" Grid.Row="8" TextWrapping="Wrap" Text="AsuroBot" Margin="5"/>
+            <Border BorderBrush="Black" BorderThickness="1" Margin="0,4" Grid.Row="3" Background="Black" Height="2" VerticalAlignment="Center"/>
+            <Border BorderBrush="Black" BorderThickness="1" Margin="0,4" Grid.Row="6" Background="Black" Height="2" VerticalAlignment="Center"/>
+        </Grid>
+
+    </Grid>
+</Window>
